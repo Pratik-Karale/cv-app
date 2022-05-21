@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class TextInput extends Component {
+export default class TextArea extends Component {
   render() {
     let styleClass=""
     switch (this.props.st) {
