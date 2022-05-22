@@ -21,6 +21,7 @@ export default class TextInput extends Component {
         rows={this.props.rows}
         value={this.props.value}
         onChange={this.props.onChange}
+        key={this.props.key}
       />
     )
   }
