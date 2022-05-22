@@ -15,7 +15,8 @@ export default class CV extends Component {
           <div>
               <Header st={this.state.mode}/>
               <Description st={this.state.mode} className="" placeholder="okokokookokooko"/>
-              <InfoSection st={this.state.mode}/>
+              <InfoSection st={this.state.mode} title="Experience"/>
+              <InfoSection st={this.state.mode} title="Education"/>
           </div>
       </div>
     )
