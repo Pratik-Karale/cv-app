@@ -14,7 +14,7 @@ export default class TextArea extends Component {
             break;
     }
     return (
-      <textarea className={`${styleClass} ${this.props.className}`} placeholder={this.props.placeholder} />
+      <textarea className={`${styleClass} ${this.props.className}`} placeholder={this.props.placeholder} cols={this.props.cols} rows={this.props.rows} />
     )
   }
 }

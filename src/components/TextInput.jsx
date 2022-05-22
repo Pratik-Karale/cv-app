@@ -14,7 +14,12 @@ export default class TextInput extends Component {
             break;
     }
     return (
-      <input type="text" className={`${styleClass} ${this.props.className}`} placeholder={this.props.placeholder} />
+      <input type="text" 
+        className={`${styleClass} ${this.props.className}`}
+        placeholder={this.props.placeholder} 
+        cols={this.props.cols}
+        rows={this.props.rows}
+      />
     )
   }
 }
