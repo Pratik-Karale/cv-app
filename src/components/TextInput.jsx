@@ -20,6 +20,7 @@ export default class TextInput extends Component {
         cols={this.props.cols}
         rows={this.props.rows}
         value={this.props.value}
+        onChange={this.props.onChange}
       />
     )
   }
