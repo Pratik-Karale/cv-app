@@ -19,6 +19,7 @@ export default class TextInput extends Component {
         placeholder={this.props.placeholder} 
         cols={this.props.cols}
         rows={this.props.rows}
+        value={this.props.value}
       />
     )
   }
