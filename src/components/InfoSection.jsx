@@ -20,7 +20,7 @@ export default class InfoSection extends Component {
     //   console.log(this.editBulletPoint)
     return (
       <div className="Info-section">
-          <TextInput value="wewwew" st="preview"/>
+          <TextInput value={this.props.title} st="preview"/>
           <ul>
             {this.state.bulletPoints.map((bulletPoint,i)=>{
                 return <li><TextInput st={this.props.st} editInput={this.editBulletPoint} value={bulletPoint}/></li>
