@@ -23,7 +23,7 @@ export default class InfoSection extends Component {
           <TextInput value={this.props.title} st="preview"/>
           <ul>
             {this.state.bulletPoints.map((bulletPoint,i)=>{
-                return <li><TextInput st={this.props.st} editInput={this.editBulletPoint} value={bulletPoint}/></li>
+                return <li key={i}><TextInput st={this.props.st} editInput={this.editBulletPoint} value={bulletPoint}/></li>
             })}
           </ul>
           <button onClick={this.addBulletPoint}>Add</button>
