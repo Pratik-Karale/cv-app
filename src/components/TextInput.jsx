@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 
-export default class TextInput extends Component {
-  render() {
+export default function TextInput({st,className,placeholder,cols,rows,value,key}){
     let styleClass=""
-    switch (this.props.st) {
+    switch (st) {
         case "preview":
             styleClass="input-preview"
             break;
@@ -15,13 +14,12 @@ export default class TextInput extends Component {
     }
     return (
       <input type="text" 
-        className={`${styleClass} ${this.props.className}`}
-        placeholder={this.props.placeholder} 
-        cols={this.props.cols}
-        rows={this.props.rows}
-        defaultValue={this.props.value}
-        key={this.props.key}
+        className={`${styleClass} ${className}`}
+        placeholder={placeholder} 
+        cols={cols}
+        rows={rows}
+        defaultValue={value}
+        key={key}
       />
     )
-  }
 }

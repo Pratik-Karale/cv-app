@@ -1,9 +1,7 @@
-import React, { Component } from 'react'
-
-export default class TextArea extends Component {
-  render() {
+import React from "react"
+export default function TextArea({st,className,placeholder,cols,rows}){
     let styleClass=""
-    switch (this.props.st) {
+    switch (st) {
         case "preview":
             styleClass="textarea-preview"
             break;
@@ -14,7 +12,7 @@ export default class TextArea extends Component {
             break;
     }
     return (
-      <textarea className={`${styleClass} ${this.props.className}`} placeholder={this.props.placeholder} cols={this.props.cols} rows={this.props.rows} />
+      <textarea className={`${styleClass} ${className}`} placeholder={placeholder} cols={cols} rows={rows} />
     )
-  }
 }
+

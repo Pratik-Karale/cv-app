@@ -1,33 +1,24 @@
-import React, { Component } from 'react'
+import { useState } from 'react'
 import TextInput from './TextInput'
-export default class InfoSection extends Component {
-    constructor(props){
-        super(props)
-        this.state={bulletPoints:["edrfwerwer"]}
-        this.addBulletPoint=this.addBulletPoint.bind(this)
-        this.editBulletPoint=this.editBulletPoint.bind(this)
-    }
-    addBulletPoint(){
+export default function InfoSection({st,title}){
+    const [bulletPoints,setBulletPoints]=useState(["edrfwerwer"])
+    const addBulletPoint=()=>{
         this.setState({bulletPoints:[...this.state.bulletPoints,""]})
     }
-    editBulletPoint(e){
-        console.log(this)
+    const editBulletPoint=(e)=>{
         const bulletPointIndex=e.target.key
-        this.state.bulletPoints[bulletPointIndex]=e.target.value
-        this.setState({bulletPoints:[...this.state.bulletPoints,"ok"]})
+        bulletPoints[bulletPointIndex]=e.target.value
+        setBulletPoints([...bulletPoints,"ok"])
     }
-  render() {
-    //   console.log(this.editBulletPoint)
     return (
       <div className="Info-section">
-          <TextInput value={this.props.title} st="preview"/>
+          <TextInput value={title} st="preview"/>
           <ul>
-            {this.state.bulletPoints.map((bulletPoint,i)=>{
-                return <li key={i}><TextInput st={this.props.st} editInput={this.editBulletPoint} value={bulletPoint}/></li>
+            {bulletPoints.map((bulletPoint,i)=>{
+                return <li key={i}><TextInput st={st} editInput={editBulletPoint} value={bulletPoint}/></li>
             })}
           </ul>
-          <button onClick={this.addBulletPoint}>Add</button>
+          <button onClick={addBulletPoint}>Add</button>
       </div>
     )
-  }
 }
